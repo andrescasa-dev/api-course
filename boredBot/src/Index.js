@@ -11,4 +11,3 @@ btn.addEventListener('click', async ()=>{
   const activity = await getActivity();
   p_activity.textContent = activity;
 })
-
