@@ -104,15 +104,25 @@ header{
 main{
   padding-top: 30px;
   margin: 0px 160px;
-  padding: 30px;
   background-color: black;
   color: white;
+}
+
+main section{
+  padding:30px;
 }
 
 main section:first-of-type h1{
   font-size: 10em;
   text-align: center;
   text-transform: uppercase;
+}
+
+main section:nth-of-type(2){
+  gap: 30px;
+  color: black;
+  background-color: white;
+  display: flex;
 }
 
 .post{
@@ -134,7 +144,8 @@ main section:first-of-type h1{
   height: 100%;
   background-image: url('https://img.freepik.com/premium-vector/cute-robot-waving-hand-cartoon-illustration_138676-2744.jpg');
   background-size: cover;
-  background-position-y: -30px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .post p{
@@ -168,4 +179,61 @@ main section:first-of-type h1{
 
 .blog .post:first-child .post__description{
   display: block;
+}
+
+button{
+  color: white;
+  padding: 8px 15px;
+  border-radius: 2px;
+  width: fit-content;
+  background-color: hsl(353, 96%, 40%);
+  cursor: pointer;
+}
+
+input, textarea{
+  border-radius: 2px;
+  background-color: #a19da668;
+  padding: 5px;
+}
+
+
+.form{
+  border: 3px solid black;
+  border-radius: 8px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.caPost{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: fixed;
+  border-radius: 50%;
+  box-shadow: -1px 4px 8px -3px rgba(0,0,0,0.75);
+  top: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+}
+.caPost img{
+  width: 60%;
+}
+
+.image-placeholder{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #6e6b71;
+  flex-grow: 1;
+  min-height: 100%;
+  background-color: #a19da668;
+  border-radius: 8px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
