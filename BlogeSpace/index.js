@@ -9,8 +9,10 @@ class App {
 
   evenListener(){
     document.addEventListener('submit',(event)=>{
-      event.preventDefault();
-      form();
+      if(event.target.closest('#form')){
+        event.preventDefault();
+        form();
+      }
     })
   }
 }

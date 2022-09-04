@@ -2,7 +2,7 @@ import view from "../utils/view.js";
 import Post from "../components/Post.js";
 import { BaseURL } from "../utils/consts.js";
 
-const POST_QUANTITY = 10;
+const POST_QUANTITY = 2;
 
 export default async function feed(){
   const posts = await fetchPosts(POST_QUANTITY);
