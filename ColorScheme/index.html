@@ -6,9 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ColorScheme</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="index.html" defer></script>
 </head>
 <body>
-  
+  <main>
+    <div class="container">
+      <menu class="menu" type="toolbar">
+        <input class="menu__picker" type="color" id="">
+        <div class="menu__mode interactive">
+          <select>
+            <option  value="">Monochrome</option>
+          </select>
+          <img class="arrow" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow--v1.png"/>
+        </div>
+        <button class="menu__getScheme interactive">Get color Scheme</button>
+      </menu>
+      <div class="pallet-color">
+        <div class="color-column">
+          <div class="pallet-color__color"></div>
+          <span class="pallet-color__colorText">#123456</span>
+        </div>
+        <div class="color-column">
+          <div class="pallet-color__color"></div>
+          <span class="pallet-color__colorText">#123456</span>
+        </div>
+        <div class="color-column">
+          <div class="pallet-color__color"></div>
+          <span class="pallet-color__colorText">#123456</span>
+        </div>
+        <div class="color-column">
+          <div class="pallet-color__color"></div>
+          <span class="pallet-color__colorText">#123456</span>
+        </div>
+        <div class="color-column">
+          <div class="pallet-color__color"></div>
+          <span class="pallet-color__colorText">#123456</span>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

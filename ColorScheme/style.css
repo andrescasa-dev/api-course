@@ -1,0 +1,179 @@
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+/* ==========================rest========================== */
+
+:root{
+  --c-primary: #FFFFFF;
+  --c-second: #D1D5DB;
+  --c-third:  #2B283A;
+}
+
+main{
+  display: grid;
+  place-content: center;
+  background-color: var(--c-third);
+  min-height: 100vh;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+
+/* ==========================component========================== */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  width: 550px;
+  background-color: var(--c-primary);
+}
+
+.menu{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding: 1.3em 1em;
+  width: 100%;
+}
+
+.interactive{
+  background-color: var(--c-primary);
+  border: 1px solid var(--c-second);
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.209);
+}
+
+.menu > *{
+  height: 100%;
+}
+
+.menu__mode{
+  position: relative;
+  padding: 1em;
+  flex-grow: 2;
+}
+
+.menu__mode .arrow{
+  position: absolute;
+  width: 1.6em;
+  top: 0.8em;
+  right: 1em;
+}
+
+.menu__getScheme{
+  padding: 1em;
+}
+
+.menu__picker{
+  height: 100%;
+  flex-grow: 0.5;
+  background-color: #d1d5db97;
+  padding: 1px 1px;
+}
+
+.pallet-color{
+  gap: 5px;
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.pallet-color .color-column{
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pallet-color .pallet-color__color{
+  flex-grow: 1;
+  background-color: black;
+}
+
+.pallet-color .pallet-color__colorText{
+  padding: 1em;
+}
