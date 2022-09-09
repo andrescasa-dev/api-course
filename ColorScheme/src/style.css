@@ -139,8 +139,14 @@ main{
 
 .menu__mode{
   position: relative;
-  padding: 1em;
   flex-grow: 2;
+}
+
+.menu__mode select{
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  padding: 1em;
 }
 
 .menu__mode .arrow{
@@ -148,6 +154,7 @@ main{
   width: 1.6em;
   top: 0.8em;
   right: 1em;
+  z-index: 0;
 }
 
 .menu__getScheme{
@@ -179,6 +186,7 @@ main{
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 84px;
 }
 
 .pallet-color .pallet-color__color{
@@ -187,4 +195,6 @@ main{
 
 .pallet-color .pallet-color__colorText{
   padding: 1em;
+  width: 100%;
 }
+
